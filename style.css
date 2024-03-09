@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+}
+#gname{
+    padding: 10px;
+}
+#gname h1{
+    font-size: 70px;
+    color: rgb(251, 251, 238);
+
+    text-shadow: 3px 3px 3px rgba(0, 0, 0,0.8);
+    
+}
+
+#panel{
+    
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    border-radius: 30px;
+    background-color: rgb(251, 251, 238);
+}
+
+#ptop{
+    padding: 0px 15%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    background-color: lightseagreen;
+}
+.element{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.element h2{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.box{
+    color: black;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 10px 20px;
+    background-color: rgb(251, 251, 238);
+    border-radius: 5px;
+}
+
+#pbtm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+.bubble{
+    display: flex;
+    font-size: 22px;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: lightseagreen;
+    color: whitesmoke;
+    border-radius: 100%;
+    transition: background 0.3s ease;
+}
+
+.bubble:hover{
+    background: rgb(9, 121, 115);
+    cursor: pointer;
+    transform: scale(1.16);
+}
+
+#restartButton {
+    background-color: hsl(177, 70%, 41%);
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none; /* Change to "none" */
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute; /* Position absolutely */
+    top: 77%; /* Position at 50% from the top */
+    left: 50%; /* Position at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the button */
+    z-index: 1; /* Ensure the button is above other elements */
+}
+#restartButton:hover {
+    background-color: hsl(177, 82%, 27%); /* Darker green on hover */
+}
+
+
+#instruction {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    #ptop {
+        padding: 0 30px;
+    }
+
+    .element {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .box {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+
+    #pbtm {
+        padding: 10px;
+    }
+
+    .bubble {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+
+    }
+    
+    .bubble:hover{
+        background: red;
+        cursor: pointer;
+        transform: scale(1.15);
+    }
+
+    #gname h1 {
+        font-size: 40px;
+    }
+    #restartButton {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+#instruction {
+    top: 10px;
+    right: 10px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+
+/* #author {
+    position: fixed;
+    bottom: 35%;
+    right: 0;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    transform: translateY(50%) rotate(-90deg);
+    transform-origin: bottom right;
+} */
